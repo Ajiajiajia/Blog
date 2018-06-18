@@ -70,7 +70,12 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'admin']], funct
 
 // Article
 Route::get('/', 'ArticleController@index');
-Route::get('/daynote',function(){
-	return view('day.note');
+Route::get('/daily',function(){
+    return redirect('/day/build/index.html');
 });
+Route::post('/daynote/create','CatalogController@create');
+Route::post('/daynote/edit','CatalogController@edit');
+Route::get('/daynote','CatalogController@show');
+Route::get('/daynote/{catalog}','CatalogController@getCatalogContent');
+Route::delete('/daynote/delete/{id}','CatalogController@delete');
 Route::get('{slug}', 'ArticleController@show');

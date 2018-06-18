@@ -37,7 +37,7 @@
                     <li><a href="{{ url('login') }}">{{ lang('Login') }}</a></li>
                     <li><a href="{{ url('register') }}">{{ lang('Register') }}</a></li>
                 @else
-		  <!--  <script>
+		    <script>
                                 if (localStorage.getItem('name') !== undefined)
                                     localStorage.setItem('name','{{Auth::user()->name}}');
                                 if (localStorage.getItem('id') !== undefined)
@@ -46,7 +46,7 @@
                                     localStorage.setItem('is_admin','{{Auth::user()->is_admin}}');
                                 if (localStorage.getItem('avatar') !== undefined)
                                     localStorage.setItem('avatar','{{Auth::user()->avatar}}')
-                            </script>-->
+                            </script>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             {{ Auth::user()->nickname ?: Auth::user()->name }}
