@@ -32,7 +32,7 @@ return [
     'article' => [
         'title'       => 'Article',
         'description' => '要么平庸，要么孤独',
-        'number'      => 15,
+        'number'      => 6,
         'sort'        => 'desc',
         'sortColumn'  => 'published_at',
     ],
